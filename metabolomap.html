@@ -1,124 +1,117 @@
-<html>
-    <head>
-        <title>MetaboloMap</title>
-    <style type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaboloMap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: white;
-  color: #333;
-  padding: 20px;
-}
-
-/* MetaboloMap Styling */
-.metabolomap {
-  max-width: 300px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.metabolomap h1 {
-  font-size: 2rem;
-  color: #244d3d;
-  margin-bottom: 10px;
-  text-align: center;
-
-}
-
-.metabolomap h1:hover {color:#4f9d6b;
-                       }
-                       
-.metabolomap p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  text-align: center;
-    border: 2px solid black;
-    padding: 12px;
-    border-radius: 15px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  margin-bottom: 10px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  background-color: #4f9d6b;
-  padding: 10px 15px;
-  display: block;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  transition: background-color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-  background-color: #36794f;
-}
-nav ul li:nth-child(1) a:hover {
-  background-color: #CB670F;
-}
-
-nav ul li:nth-child(2) a:hover {
-  background-color: #9e000b;
-}
-
-nav ul li:nth-child(3) a:hover {
-  background-color: #32bf82;
-}
-
-nav ul li:nth-child(4) a:hover {
-  background-color: #2ac942;
-}
-
-nav ul li:nth-child(5) a:hover {
-  background-color: #3a32ad;
-}
-
-nav ul li:nth-child(6) a:hover {
-  background-color: #f0c402;
-}
-
-nav ul li:nth-child(7) a:hover {
-  background-color: #620080; 
-}
-
-nav ul li:nth-child(8) a:hover {
-  background-color: #cc1f67; 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      color: #333;
+      padding: 0;
     }
 
-        span {color: black
-              }
-        
-</style>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    .sidebar-menu {
+      padding: 0;
+    }
+
+    .sidebar-menu .menu-header {
+      text-align: center;
+      padding: 8px 0 12px;
+      border-bottom: 1px solid #e8eee8;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-menu .menu-header h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #244d3d;
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar-menu .menu-header p {
+      font-size: 0.72rem;
+      color: #888;
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    .sidebar-menu nav ul {
+      list-style: none;
+    }
+
+    .sidebar-menu nav ul li {
+      margin-bottom: 6px;
+    }
+
+    .sidebar-menu nav ul li a {
+      text-decoration: none;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: all 0.2s ease;
+      background: #f8faf8;
+      border-left: 3px solid transparent;
+    }
+
+    .sidebar-menu nav ul li a .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .sidebar-menu nav ul li a:hover {
+      background: #edf5ed;
+      border-left-color: #4f9d6b;
+      transform: translateX(2px);
+    }
+
+    .sidebar-menu nav ul li:nth-child(1) a .dot { background: #CB670F; }
+    .sidebar-menu nav ul li:nth-child(2) a .dot { background: #9e000b; }
+    .sidebar-menu nav ul li:nth-child(3) a .dot { background: #32bf82; }
+    .sidebar-menu nav ul li:nth-child(4) a .dot { background: #2ac942; }
+    .sidebar-menu nav ul li:nth-child(5) a .dot { background: #3a32ad; }
+    .sidebar-menu nav ul li:nth-child(6) a .dot { background: #f0c402; }
+    .sidebar-menu nav ul li:nth-child(7) a .dot { background: #620080; }
+    .sidebar-menu nav ul li:nth-child(8) a .dot { background: #cc1f67; }
+
+    .sidebar-menu nav ul li:nth-child(1) a:hover { border-left-color: #CB670F; }
+    .sidebar-menu nav ul li:nth-child(2) a:hover { border-left-color: #9e000b; }
+    .sidebar-menu nav ul li:nth-child(3) a:hover { border-left-color: #32bf82; }
+    .sidebar-menu nav ul li:nth-child(4) a:hover { border-left-color: #2ac942; }
+    .sidebar-menu nav ul li:nth-child(5) a:hover { border-left-color: #3a32ad; }
+    .sidebar-menu nav ul li:nth-child(6) a:hover { border-left-color: #f0c402; }
+    .sidebar-menu nav ul li:nth-child(7) a:hover { border-left-color: #620080; }
+    .sidebar-menu nav ul li:nth-child(8) a:hover { border-left-color: #cc1f67; }
+  </style>
 </head>
 <body>
-  <div class="metabolomap">
-    <h1><span>⌕</span>MetaboloMap</h1>
-    <p><b>Click on a pathway from the buttons below to explore!</b></p>
+  <div class="sidebar-menu">
+    <div class="menu-header">
+      <h2>⌕ MetaboloMap</h2>
+      <p>Click a pathway to explore</p>
+    </div>
     <nav>
       <ul>
-        <li><a href="glycolysis.html" target="content">Glycolysis</a></li>
-        <li><a href="pdh_tca.html" target="content">PDH and TCA</a></li>
-        <li><a href="etc.html" target="content">ETC</a></li>
-        <li><a href="gluconeogenesis.html" target="content">Gluconeogenesis</a></li>
-        <li><a href="glycogen.html" target="content">Glycogenesis and Glycogenolysis</a></li>
-        <li><a href="fatty_acid.html" target="content">Fatty Acid Synthesis and Beta Oxidation</a></li>
-        <li><a href="hmp.html" target="content">HMP</a></li>
-        <li><a href="nitrogen_metabolism.html" target="content">Nitrogen Metabolism and Urea Cycle</a></li>
+        <li><a href="glycolysis.html" target="content"><span class="dot"></span>Glycolysis</a></li>
+        <li><a href="pdh_tca.html" target="content"><span class="dot"></span>PDH and TCA</a></li>
+        <li><a href="etc.html" target="content"><span class="dot"></span>ETC</a></li>
+        <li><a href="gluconeogenesis.html" target="content"><span class="dot"></span>Gluconeogenesis</a></li>
+        <li><a href="glycogen.html" target="content"><span class="dot"></span>Glycogen Metabolism</a></li>
+        <li><a href="fatty_acid.html" target="content"><span class="dot"></span>Fatty Acid Metabolism</a></li>
+        <li><a href="hmp.html" target="content"><span class="dot"></span>HMP</a></li>
+        <li><a href="nitrogen_metabolism.html" target="content"><span class="dot"></span>Nitrogen Metabolism</a></li>
       </ul>
     </nav>
   </div>
