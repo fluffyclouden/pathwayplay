@@ -1,0 +1,185 @@
+<html>
+<head>
+
+<title>PDH and TCA on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #ff8a92; }
+    .button-link-next { background-color: #9e000b; }
+
+    /* Toggle table visibility */
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #9e000b;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ff8a92;
+                         }
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color:#96031e;
+        text-align: center;}
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    
+    h2 {font-family: 'Poppins'; color:#c7185e; text-align: center;
+        }
+    
+    .imgkrebs {
+         width: 850px;
+        height: 900px;}
+    
+    .imgpo {width:900px;
+            height:150px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    span {
+          font-weight: bold;}
+    
+    li {color:#c7185e;
+}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="top"></a>
+    
+<h1>2<sup>nd</sup> Path: PDH and TCA</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Welcome to the PDH reaction and the TCA cycle pathways! PDH can also be referred to as <span style="background-color: #ff8a92;">pyruvate oxidation</span> and the TCA, or tricarboxylic acid cycle, is also called the <span style="background-color: #ff8a92;">Krebs cycle</span> or the <span style="background-color: #ff8a92;">citric acid cycle</span>. These reactions take place in the <span style="background-color: #ff8a92;">mitochondrial matrix</span>, and is one of the four fates of the pyruvate molecule. In aerobic cellular respiration, this pathway follows glycolysis.</p>
+</div>
+
+<h2>What is PDH?</h2>
+<p style="font-family: 'Poppins', sans-serif;">The PDH and TCA reactions are the <b>second and third steps of aerobic respiration, respectively</b>. Pyruvate oxidation requires the enzyme <span style="background-color: #ff8a92;">pyruvate dehydrogenase</span>, which is an 3-enzyme complex. Each enzyme in the complex requires a coenzyme required from a vitamin, with the exception of <span style="color:#96031e;">lipoic acid in enzyme 2</span>.</p>
+    
+<div class="center-img">
+    <img src="pdhtable.jpg" style="height: 320px; width:500px;">
+</div>
+
+    <h2>What is TCA?</h2>
+<p style="font-family: 'Poppins', sans-serif;">The TCA cycle requires <span style="background-color: #ff8a92;">8 enzymes</span>. They are citrate synthase, aconitase, isocitrate dehydrogenase, alpha-ketoglutarate dehydrogenase, succinyl-CoA synthetase, succinate dehydrogenase, fumarase, and malate dehydrogenase. In short, it<span style="color:#96031e;"> generates reduced coenzymes,</span> and <span style="color:#96031e;">oxidizes acetyl-CoA to carbon dioxide</span>.</p>
+
+
+<div style="border: 1px solid black; padding: 10px; border-radius: 5px;">
+    <h3 style="color:black; font-family: 'Poppins'; text-align: center;">The big picture: <b>PDH converts <span style="color:#96031e;">3-carbon compound pyruvate</span> to <span style="color:#96031e;">2-carbon compound, acetyl-CoA</span><b>.The TCA cycle, through a series of reactions, "spins" twice <i>or once per every acetyl-CoA</i>. Each cycle generates . . .</b>
+    <ul>
+        <li>3 NADH</li>
+        <li>1 FADH<sub>2</sub></li>
+        <li>1 ATP</li>
+    </ul></h3>
+</div>
+
+<h2>What is the significance?</h2>
+<p style="font-family: 'Poppins', sans-serif;">PDH and TCA generate reduced coenzymes/electron carriers that will be of use in the next pathway, <b>the ETC!</b> The TCA also generates <span style="color:#96031e;">CO<sub>2</sub>and citrate</span>. Citrate is an extremely important inhibitor for other major pathways, such as glycolysis. It is a major source of energy, generating approximately <b>12 ATP</b> per acetyl-CoA.</p>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">This process takes place <b>after a meal</b>, or <em>during the fed state</em>. Since it takes place in aerobic respiration, following glycolysis, it is also indirectly <b>stimulated by insulin</b>. Let's take a look at some other activators and inhibitors of each enzyme.</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <th>Reaction</th>
+        <th>Activator</th>
+        <th>Inhibitor</th>
+    </tr>
+    <tr>
+        <td><b>Pyruvate dehydrogenase</b></td>
+        <td>pyruvate → acetyl-CoA</td>
+        <td>pyruvate, Ca<sup>2+</sup></td>
+        <td>high ATP and NADH levels</td>
+    </tr>
+    <tr>
+        <td><b>Citrate synthase</b></td>
+        <td>acetyl-CoA (and oxaloacetate) → citrate</td>
+        <td>—</td>
+        <td>ATP, NADH, citrate, succinyl-CoA</td>
+    </tr>
+    <tr>
+        <td><b>Isocitrate dehydrogenase</b></td>
+        <td>isocitrate → alpha-ketoglutarate</td>
+        <td>ADP, Ca<sup>2+</sup></td>
+        <td>ATP, NADH</td>
+    </tr>
+    <tr>
+        <td><b>Alpha-ketoglutarate dehydrogenase</b></td>
+        <td>alpha-ketoglutarate → succinyl-CoA</td>
+        <td>Ca<sup>2+</sup></td>
+        <td>ATP, NADH, succinyl-CoA</td>
+    </tr>
+</table>
+    </div>
+
+<h2><u>PDH and TCA Full Diagrams</u></h2>
+        <p>Check out these diagrams, outlining the full picture of the pathways.</p>
+    <div class= "imagediv">
+    
+        <img class="imgpo" src="pyruvateoxidation.png">
+        </div>
+    <div class="imagediv">
+        <img class="imgkrebs" src="tca.png">
+        </div>
+
+     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="etc.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>

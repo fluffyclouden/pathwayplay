@@ -1,0 +1,169 @@
+<html>
+<head>
+
+<title>ETC on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #24ff91; }
+    .button-link-next { background-color: #32bf82; }
+
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #32bf82;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #9cf7c9;
+                         }
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color:#32bf82;
+        text-align: center;}
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    
+    h2 {font-family: 'Poppins'; color:#2496d4; text-align: center;
+        }
+    
+    
+    .imgpo {width:900px;
+            height:550px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    span {
+          font-weight: bold;}
+    
+    li {color:#2496d4;
+}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+<a id="top"></a>  
+<h1>3<sup>rd</sup> Path: ETC and Chemiosmosis</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">We're heading down the <span style="background-color:#9cf7c9;">electron transport chain</span>! The ETC comprises the <span style="background-color:#9cf7c9;">final step in cellular respiration</span>, generating boatloads of ATP through a series of complexes. All of the <span style="background-color:#9cf7c9;">electron carriers</span>, NADH and FADH<sub>2</sub> generated from other pathways are used here, to power this chain reaction. It takes place in the <span>inner mitochondrial membrane</span>. Let's head deeper into the path.</p>
+</div>
+
+<h2>What is the ETC?</h2>
+<p style="font-family: 'Poppins', sans-serif;">This pathway is a chain reaction where an <span>electron</span> is passed through a series of <span style="color:#32bf82;">4 complexes</span>, catalyzing redox reactions involving NADH and FADH<sub>2</sub>. Oxygen accepts the electron after it passes through the chain. Then, a hydrogen ion gradient forms in the <span style="color:#32bf82;"> intermembrane space</span>, powering the <span style="color:#32bf82;">5th complex</span>, which is where all the ATP is generated. But what are these "complexes"? Where do they get the electrons from? Let's take a look a the table below to get a better picture.</p>
+    
+<div class="center-img">
+    <img src="etctable.jpg" style="height: 320px; width:700px;">
+</div>
+
+<table>
+<tr>
+    <td><b>Complex V</b> makes up the chemiosmotic half of the chain. It does not receive electrons, but rather pumps the hydrogen ions in the intermembrane space from the oxidized NAD+s and FADs down its concentration gradient, back into the inner membrane, generating <span>ATP in the process</span>. Complex V is called <b>ATP synthase</b>.</td>
+</tr></table>
+
+<h2 style="color:#32bf82;">Note: Oxygen is always the final electron acceptor of the ETC. It accepts hydrogens, reducing it to water.</h2>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+
+<h2 style="text-align:center;"><u>Let’s Talk Inhibitors and... Uncouplers?</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">That's right. No direct activators of enzymes here. The ETC is a little different-- remember, it's mainly just passing an electron down a series of channels so that oxygen can accept it. The extra hydrogens that were pumped into the intermembrane space are then used by ATP synthase to bring them back in and make energy. So, really there are <span style="background-color:#9cf7c9;">2 parts</span> to the entire process that can be "messed with."
+
+<p  style="font-family: 'Poppins', sans-serif; text-align:justify;">So, <span style="color:#32bf82;">inhibitors</span> "mess with" the electron transport from complex to complex (I-IV).</p>
+
+<p  style="font-family: 'Poppins', sans-serif; text-align:justify;"><span style="color:#32bf82;">Uncouplers</span> "mess with" the hydrogen ion gradient required to make energy at complex V (ATP synthase).</p>    
+<label for="toggle-table" class="toggle-button">Click to reveal some inhibitors and uncouplers</label>
+    
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Molecule</th>
+        <th>Inhibitor or Uncoupler?</th>
+        <th>How it Works</th>
+    
+    </tr>
+    <tr>
+        <td><b>Thermogenin</b></td>
+        <td>Uncoupler</td>
+        <td>Increases the rate of the ETC and pumps hydrogen ions back into the matrix without generating ATP (blocks ATP synthase due to lack of substrate and H+ gradient)</td>
+    </tr>
+    <tr>
+        <td><b>Antimycin A</b></td>
+        <td>Inhibitor</td>
+        <td>Decreases activity of cytochrome reductase/complex III</td>
+    </tr>
+    <tr>
+        <td><b>Barbiturate amytal</b></td>
+        <td>Inhibitor</td>
+        <td>Decreases activity of NADH dehydrogenase/complex I</td>
+    </tr>
+    <tr>
+        <td><b>2,4 dinitrophenol</b></td>
+        <td>Uncoupler</td>
+        <td>Increases the permeability of the inner mitochondrial membrane, causing the ETC to run without the H+ gradient</td>
+    </tr>
+</table>
+    </div>
+
+<h2><u>ETC Diagram</u></h2>
+        <p><b>Take a look at this diagram with notes for better clarity!</b></p>
+    <div class= "imagediv">
+    
+        <img class="imgpo" src="etc.png">
+        </div>
+
+     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="gluconeogenesis.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>

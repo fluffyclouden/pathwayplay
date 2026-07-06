@@ -1,0 +1,193 @@
+<html>
+<head>
+
+<title>Gluconeogenesis on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #4de3a0; }
+    .button-link-next { background-color: #00ab47; }
+
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+    /* Table styling */
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #22ba59;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #a3ffc9;
+        border: 1px solid black;}
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color: #2ac942;
+        text-align: center;
+        }
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    h2 {font-family: 'Poppins'; color:#00ab47; text-align: center;
+        }
+    img {align: center;
+         width: 800px;
+        height: 730px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+    span {font-weight: bold
+          }
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="top"></a>
+<h1>4<sup>th</sup> Path: Gluconeogenesis</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Welcome to the gluconeogenesis pathway! While glycolysis, PDH/TCA, and ETC were all <b>catabolic pathways</b> that create <span style="background-color: #4de3a0;">energy from glucose intake</span> in the <b>fed state</b>, gluconeogenesis is an <b>anabolic pathway</b> that creates <span style="background-color: #4de3a0;">glucose from energy</span> in the <b>fasting state</b>. This process <span style="background-color: #4de3a0;">mainly occurs in the liver</span> and a little bit in the renal cortex of the kidney. Let's get into it and not waste any more time.</p>
+</div>
+
+<h2>What is the gluconeogenesis pathway?</h2>
+<p style="font-family: 'Poppins', sans-serif;"><b>Let's take apart the word:</b></p>
+
+<table>
+    <tr><td style="font-family: 'Poppins', sans-serif;">Gluco (glucose/sugar) + neo (new) + genesis (creation) </tr>
+</table>
+    
+<p style="font-family: 'Poppins', sans-serif;">In this pathway, we're making new sugars <b>from preexisting molecules</b> in the body.<span style="background-color: #4de3a0;"> Glycolysis makes pyruvate from glucose</span>. This time, we're making <span style ="color:#2ac942;">glucose from pyruvate</span>.</p>
+    
+
+<div class="center-img">
+    <img src="pyruvate2glucose.jpg" style="height: 100px; width:380px;">
+</div>
+
+<div style="border: 1px solid black; padding: 10px; border-radius: 5px;">
+    <h3 style="color:black; font-family: 'Poppins'; text-align: center;">So is <span>gluconeogenesis</span> the reverse of <span>glycolysis</span>?</h3>
+
+        <p><b>Yes, by definition, no, by thermodynamics.</b> The exact reverse of glycolysis is <span style="background-color: #4de3a0;">NOT thermodynamically favorable</span>, while gluconeogenesis is <b>irreversible and thermodynamically favorable</b>. However, the reversible steps of glycolysis, use the same enzymes in gluconeogenesis, and the two are <span>reverse regulated</span>, meaning that inhibitors of one process are activators of the other.</p>
+
+</div>
+    
+<h2 style= "font-family: 'Poppins'; color:#2ac942;">What is the significance?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Gluconeogenesis is the <b>main provider of glucose</b> in the body during early fasting stages. It usually occurs during sleep, and the liver gets its materials to carry out the process <span style="background-color: #4de3a0;">from glycogen, alanine, or lactate</span>. It plays a major role in <span style="background-color: #4de3a0;">preventing hypoglycemia (low blood sugar).</span></p>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <h2 style="text-align:center;"><u>Let’s Talk Phases!</u></h2>
+    <p>The gluconeogenic pathway can be broken down into three phases, bypass 1, conversion and bypass 2.</p>
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Summary</th>
+        </tr>
+        <tr>
+            <td><b>1st Bypass</b></td>
+            <td>ATP and GTP is invested to bypass the irreversible phases of glycolysis. This phase consists of the conversion of pyruvate to oxaloacetate through PEP carboxylase, and the conversion of oxaloacetate to PEP by PEP carboxykinase.</td>
+        </tr>
+        <tr>
+            <td><b>Conversion</b></td>
+            <td>The reversible reactions of glycolysis occur in the opposite direction. This is where glycolysis and gluconeogenesis "share" enzymes. It consists of all reactions containing reversible intermediates (ex: G3P → DHAP through triosephosphate isomerase).</td>
+        </tr>
+        <tr>
+            <td><b>2nd Bypass</b></td>
+            <td>This contains the last two steps that bypass irreversible glycolysis phases. This phase consists of the conversion of fructose-1,6-BP to fructose-6-P by fructose-1,6-bisphosphatase, and the conversion of glucose-6-P to glucose via glucose-6-phosphatase.</td>
+        </tr>
+    </table>
+</div>
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">This process takes place <b>in early starvation</b>or during the <em>fasting state</em>. Thus <b>the main activator</b> of gluconeogenesis is <span style="background-color: #4de3a0;">glucagon</span> and its main inhibitor is <span style="background-color: #2ac942;"> insulin</span>. Below are some other activators and inhibitors specific to enzymes in the process.</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <th>Reaction</th>
+        <th>Activator</th>
+        <th>Inhibitor</th>
+    </tr>
+    <tr>
+        <td><b>PEP carboxykinase</b></td>
+        <td>oxaloacetate → PEP</td>
+        <td>glucagon</td>
+        <td>insulin</td>
+    </tr>
+    <tr>
+        <td><b>Pyruvate carboxylase</b></td>
+        <td>Pyruvate → oxaloacetate</td>
+        <td>acetyl-CoA</td>
+        <td>--</td>
+    </tr>
+    <tr>
+        <td><b>Fructose-1,6-bisphosphatase</b></td>
+        <td>Fructose-1,6-BP → fructose-6-phosphate</td>
+        <td>ATP, glucagon</td>
+        <td>insulin, AMP, fructose-2,6-BP</td>
+    </tr>
+    <tr>
+        <td><b>Glucose-6-phosphatase</b></td>
+        <td>Glucose-6-phosphate → glucose</td>
+        <td>glucagon</td>
+        <td>insulin</td>
+    </tr>
+</table>
+
+<h2><u>Gluconeogenesis Full Diagram</u></h2>
+        <p><b>Check out this diagram, outlining the full picture of the pathway.</b></p>
+    <div class= "imagediv">
+    
+        <img src="gluconeogenesis.png">
+        </div>
+
+     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="glycogen.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>

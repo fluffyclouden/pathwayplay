@@ -1,0 +1,187 @@
+<html>
+<head>
+
+<title>Nitrogen Metabolism on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #f06c9c; }
+    .button-link-next { background-color: #b50058; }
+
+    /* Toggle table visibility */
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+    /* Table styling */
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #b50058;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #eda1bd;
+        border: 1px solid black;}
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color: #cc1f67;
+        text-align: center;
+        }
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    h2 {font-family: 'Poppins'; color:#f06c9c; text-align: center;
+        }
+    img {align: center;
+         width: 750px;
+        height: 500px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    
+    span {
+          font-weight: bold;}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="top"></a>
+    
+<h1>8<sup>th</sup> Path: Nitrogen Metabolism</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Welcome to our page on <b>nitrogen metabolism</b>. This process includes a set of different pathways that both <span style="background-color:#eda1bd;">utilize and dispose of nitrogen accordingly</span>. Let's take a look at how we <span style="background-color:#eda1bd;">obtain nitrogen</span>, and the <b>processes that it is used for</b>.</p>
+</div>
+
+<h2>What is Nitrogen Metabolism?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Nitrogen metabolism encompasses all of the ways the body uses nitrogen from intake. <span style="background-color:#eda1bd;">A majority of nitrogen intake is derived from dietary proteins</span>. Unlike with fats and carbohydrate processes, <b>nitrogen is not stored in the body--</b> it is either used or excreted as waste. The amount of nitrogen excreted and taken in can be measured as positive or negative. This is known as <b>nitrogen balance.</b> So what makes a nitrogen balance <span style="background-color:#eda1bd;">"positive"</span> or <span style="background-color:#eda1bd;">"negative"</span>?</p>
+
+<table>
+    <th>Positive Nitrogen Balance</th>
+    <th>Negative Nitrogen Balance</th>
+    <tr>
+        <td><ul>
+            <li>Nitrogen intake exceeds excretion</li>
+            <li>Increased protein synthesis to support growth and development</li>
+            <li>Likely occurs in pregnant women or growing children</li>
+        </ul></td>
+        <td><ul>
+            <li>Nitrogen loss exceeds nitrogen intake (usually through urine/urea)</li>
+            <li>Occurs during metabolic stress, inadequate dietary protein, or lack of essential amino acids
+            </li
+                <li>Seen in malnourished individuals</li>
+</ul>
+        </td>
+    </tr>
+</table>
+    
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+<h2>What is the significance?</h2>
+<p style="font-family: 'Poppins', sans-serif;">All processes in this pathway are necessary to maintain<span style="color:#f06c9c;"> healthy nitrogen balances</span>. Ammonia is <span style="background-color:#eda1bd;">toxic to the body</span>, and can easily be fatal if not <span style="color:#f06c9c;">excreted through the urea cycle,</span> which synthesizes urea for urine excretion, or utilized to synthesize amino acids. Nitrogen metabolism also generates  <span style="color:#f06c9c;">NADPH</span>.</p>
+
+
+    <h2 style="text-align:center;"><u>Let’s Talk Phases!</u></h2>
+    <p>Here's the big picture of nitrogen metabolism in 3 phases.</p>
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Summary</th>
+        </tr>
+        <tr>
+        <td><b>Assimilation</b></td>
+        <td>Ammonia (NH₃) is incorporated into glutamate and glutamine using enzymes like <i>glutamine synthetase</i>. Glutamate acts as the primary nitrogen donor.</td>
+      </tr>
+      <tr>
+        <td><b>Transamination</b></td>
+        <td>Amino groups are transferred between molecules by transaminases, often involving glutamate and α-ketoglutarate.</td>
+      </tr>
+      <tr>
+        <td><b>Excretion</b></td>
+        <td>Excess nitrogen is converted to urea in the urea cycle and excreted in urine, preventing toxic ammonia accumulation.</td>
+      </tr>
+        
+    </table>
+</div>
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">Just like every process, nitrogen metabolism enzymes have activators and inhibitors too. Two enzymes from the entire cycle in particular stand out. Take a look at them below.</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <  <th>Reaction</th>
+      <th>Activator</th>
+      <th>Inhibitor</th>
+    </tr>
+    <tr>
+      <td><b>Glutamine Synthetase</b></td>
+      <td>Glutamate → Glutamine</td>
+      <td>ATP, NH₃</td>
+      <td>AMP, Ala</td>
+    </tr>
+    <tr>
+      <td><b>Carbamoyl Phosphate Synthetase I</b></td>
+      <td>NH₃ + CO₂ → Carbamoyl Phosphate</td>
+      <td>N-acetylglutamate</td>
+      <td>--</td>
+    </tr>
+  </table>
+
+<h2><u> Full Diagram</u></h2>
+        <p><b>Check out this diagram, outlining the full picture of the pathway.</b></p>
+    <div class= "imagediv">
+    
+        <img src="nitrogenmetabolism.jpg">
+        </div>
+     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="endofpathwayplay.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>

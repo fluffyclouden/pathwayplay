@@ -1,0 +1,190 @@
+
+<html>
+<head>
+
+<title>Glycolysis on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #f9c686; }
+    .button-link-next { background-color: #CB670F; }
+
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #CB670F;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f9c686;
+        border: 1px solid black;}
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color: #CB670F;
+        text-align: center;
+        }
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    h2 {font-family: 'Poppins'; color:#e38017; text-align: center;
+        }
+    img {align: center;
+         width: 750px;
+        height: 1000px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    
+    span {
+          font-weight: bold;}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a id="top"></a>
+<h1>1<sup>st</sup> Path: Glycolysis</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Welcome to the Glycolysis pathway! In this path, you’ll follow the steps to completion of glycolysis, <span style="background-color:#f9c686;"> a metabolic pathway performed by all organisms</span>, from plants, to bacteria, to animals, to us, humans!</p>
+</div>
+
+<h2>What is the glycolysis pathway?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Glycolysis is the first step of the cellular respiration process. The cellular respiration process can be depicted by the general formula:</p>
+
+<table>
+    <tr><td style="font-family: 'Poppins', sans-serif;">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> —> 6CO<sub>2</sub> + 6H<sub>2</sub>O</td></tr>
+</table>
+    
+<p style="font-family: 'Poppins', sans-serif;">The glycolysis pathway <b>ON ITS OWN</b> is depicted by this general formula:</p>
+
+<table>
+    <tr><td style="font-family: 'Poppins', sans-serif;">Glucose + 2 NAD+ + 2 ADP + 2 P<sub>i</sub> —> 2 Pyruvate + 2 NADH + 2 H+ + 2 ATP + 2 H<sub>2</sub>O</td></tr>
+</table>
+
+<div class="center-img">
+    <img src="glucose2pyruvate.jpg" style="height: 100px; width:350px;">
+</div>
+
+<div style="border: 1px solid black; padding: 10px; border-radius: 5px;">
+    <h3 style="color:black; font-family: 'Poppins'; text-align: center;">The big picture: <b><span style="color:#F08A0F;">6-carbon sugar glucose</b></span> is the reactant, <b><span style="color:#F08A0F;">two 3-carbon compound pyruvates</span> are the products</b>. We’ll get into it as we go!</h3>
+</div>
+
+<h2 style= "font-family: 'Poppins'; color:#e38017;">What is the significance?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Glycolysis is the only metabolic path one can take to create energy from glucose without the use of Oxygen, or without the mitochondria organelle. <b>This is why it is performed by ALL organisms, and all cells. Some key cells in our bodies that REQUIRE glycolysis for energy are <span style="color:#CB670F;">RED BLOOD CELLS</span></b>, which are essentially little discs with no organelles, and <span style="color:#CB670F;"><b>MUSCLE CELLS</b></span> that grow low on oxygen during exercise.</p>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <h2 style="text-align:center;"><u>Let’s Talk Phases!</u></h2>
+    <p>The glycolytic pathway can be broken down into three phases: energy investment, cleavage, and energy payoff. Check out the diagram and tables below.</p>
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Summary</th>
+        </tr>
+        <tr>
+            <td><b>Energy Investment</b></td>
+            <td>2 ATP is <em>invested</em>: one for the conversion of glucose to glucose-6-P, one for the conversion of fructose-6-phosphate to fructose-1,6-bisphosphate</td>
+        </tr>
+        <tr>
+            <td><b>Cleavage</b></td>
+            <td>Fructose-1,6-BP is cleaved into 2 molecules of glyceraldehyde-3-phosphate(G3P), which may be isomerized into dihydroxyacetone phosphate (DHAP)</td>
+        </tr>
+        <tr>
+            <td><b>Energy Payoff</b></td>
+            <td>4 ATP is <em>generated</em>: two from the conversion of 2 1,3-bisphosphoglycerate into 2 3-phosphoglycerate molecules; 2 from the conversion of 2 phosphoenolpyruvate (PEP) molecules to 2 pyruvate. 2 NADH is also generated from the conversion of 2 G3P into 2 1,3-bisphosphoglycerate</td>
+        </tr>
+    </table>
+</div>
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">This process takes place <b>after a meal</b>, or <em>during the fed state</em>. After eating, all those glucose molecules will be free floating in the blood, and our body will want to remove them and have <span style="background-color:#f9c686;">uptake into liver tissues</span>. That being said, <b>the main activator for glycolysis is insulin</b>, and <b>the main inhibitor is its opposing hormone, glucagon</b>. Let’s take a look at some other stop signs and go signs for specific enzymes with the button below. Toggle it off to test yourself!</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <th>Reaction</th>
+        <th>Activator</th>
+        <th>Inhibitor</th>
+    </tr>
+    <tr>
+        <td><b>PFK-1</b></td>
+        <td>Fructose-6-P → Fructose-1,6-BP</td>
+        <td>Fructose-2,6-BP, ADP/AMP</td>
+        <td>Citrate, ATP, glucagon</td>
+    </tr>
+    <tr>
+        <td><b>Enolase</b></td>
+        <td>2-phosphoglycerate → phosphoenolpyruvate</td>
+        <td>—</td>
+        <td>Fluoride poison</td>
+    </tr>
+    <tr>
+        <td><b>Pyruvate kinase</b></td>
+        <td>phosphoenolpyruvate → pyruvate</td>
+        <td>Fructose-1,6-BP</td>
+        <td>acetyl-CoA, glucagon</td>
+    </tr>
+</table>
+
+<h2><u>Glycolysis Full Diagram</u></h2>
+        <p><b>Check out this diagram, outlining the full picture of the pathway.</b></p>
+    <div class= "imagediv">
+    
+        <img src="glycolysis.png">
+        </div>
+
+     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="pdh_tca.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>

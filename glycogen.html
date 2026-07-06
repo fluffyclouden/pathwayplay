@@ -1,0 +1,162 @@
+<html>
+<head>
+
+<title>Glycogen Metabolism on PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #a3f1ff; }
+    .button-link-next { background-color: #3a32ad; }
+
+
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #34a1eb;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #a3f1ff;
+                         }
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color:#3a32ad;
+        text-align: center;}
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    
+    h2 {font-family: 'Poppins'; color:#34a1eb; text-align: center;
+        }
+    
+    .imggly {
+         width: 750px;
+        height: 900px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    span {
+          font-weight: bold;}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<a id="top"></a>
+    
+<h1>5<sup>th</sup> Path: Glycogen Metabolism</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Let's switch gears from glucose and talk about <span style="background-color: #a3f1ff;">glycogen metabolism!</span> Glycogenesis and glycogenolysis are processes that create and break down glycogen, respectively. Similar to glycolysis and gluconeogenesis, they are <span style="background-color: #a3f1ff;">reverses of each other by definition</span>. Let's find out what glycogen is, and how it's made. </p>
+</div>
+
+<h2>What is <u>glycogen</u>?</h2>
+    <p style="font-family:'Poppins';"> Glycogen is pretty much a series of long chains of glucose molecules with branches, predominated by <span style="background-color: #a3f1ff;">α-1,4 glycosidic linkages,</span> and <span style="background-color: #a3f1ff;">α-1,6 glycosidic linkages</span> at every 8-10 glucose residues. Remember your organic chemistry! The <b>anomeric carbon</b>, or the carbon that is <b>not attached</b> to another glucose residue, has a reducing end, and is attached to a protein called <span style="background-color: #a3f1ff;">glycogenin</span>.  Take a look at the structure below to better understand glycogen. Keep in mind that each dot represents a glucose residue.</p>
+    <div class="center-img">
+    <img src="glycogenstructure.jpg" style="height: 270px; width:600px;">
+</div>
+    
+<h2>What is Glycogenesis?</h2>
+<p style="font-family: 'Poppins', sans-serif;">In simple terms, its the creation of<span style="background-color: #a3f1ff;">glycogen from glucose</span>. A primer initiates the process, which can either be a <span style="background-color: #a3f1ff;">preexisting glycogen molecule</span> or, if glycogen is low or depleted, the protein <span style="background-color: #a3f1ff;">glycogenin.</span> <span style="color:#3a32ad;">The main enzyme is glycogen synthase</span>.</p>
+
+    <h2>What is Glycogenolysis?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Lysis always means <span style="background-color: #a3f1ff;">breakdown</span>. Glycogenolysis is the breakdown of glycogen into free glucose molecules. It<span style="background-color: #a3f1ff;">shortens glycogen chains</span> and <span style="background-color: #a3f1ff;">debranches alpha-1,6 glycosidic bonds</span>.<span style="color:#3a32ad;"> The main enzyme is glycogen phosphorylase</span>.</p>
+
+
+<div style="border: 1px solid black; padding: 10px; border-radius: 5px;">
+    <h3 style="color:black; font-family: 'Poppins'; text-align: center;"><b>The big picture:</b> Glycogenesis creates glycogen from free glucose, which occurs in the <span style="color:#3a32ad;">fed state.</span> Glycogenolysis breaks down glycogen, freeing glucose molecules, which occurs in the <span style="color:#3a32ad;">fasting state.</span></h3>
+</div>
+
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors (Regulation)!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">Since the processes are opposites, <b>glycogenolysis and glycogenesis are reverse regulated.</b> The processes are regulated by controlling the <b>main enzymes of each process,</b> <span style= "background-color: #a3f1ff;"> glycogen synthase (for glycogenesis), and glycogen phosphorylase (for glycogenolysis)</span>. Let's take a look at some of the enzymes in both processes, with their activators and inhibitors.</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <th>Process</th>
+        <th>Activator</th>
+        <th>Inhibitor</th>
+    </tr>
+    <tr>
+        <td><b>Glycogen synthase</b></td>
+        <td>Glycogenesis</td>
+        <td>insulin, glucose-6-phosphate</td>
+        <td> Ca<sup>2+</sup> in muscle cells, glucagon/epinephrine (leading to inhibition with protein kinase A or protein kinase C)</td>
+    </tr>
+    <tr>
+        <td><b>Glycogen phosphorylase</b></td>
+        <td>Glycogenolysis</td>
+        <td>glucagon/epinephrine (leading to activation by protein kinase A and calmodulin),  Ca<sup>2+</sup> and AMP (low ATP levels) in muscle cells</td>
+        <td>glucose-6-phosphate, ATP, glucose, insulin</td>
+    </tr>
+</table>
+    
+
+<h2><u>Glycogen Metabolism Full Diagrams</u></h2>
+        <p>Check out these diagrams, outlining the full picture of the pathways.</p>
+    <div class= "imagediv">
+    
+        <img class="imggly" src="glycogenesis.jpg">
+        </div>
+    <div class="imagediv">
+        <img class="imggly" src="glycogenolysis.jpg">
+        </div>
+    <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="fatty_acid.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+
+
+</body>
+</html>

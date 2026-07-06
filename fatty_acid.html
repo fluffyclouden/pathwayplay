@@ -1,0 +1,169 @@
+<html>
+<head>
+
+<title>Fatty Acid Metabolism PathwayPlay</title>
+<style>
+
+    .toggle-button, .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .toggle-button { background-color: white; color: black; display: block;}
+    .button-link-summary { background-color: #f29e0c; }
+    .button-link-next { background-color: #f0c402; }
+
+    .toggle-checkbox { display: none; }
+    .fade-in-table {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        margin-top: 15px;
+    }
+    .toggle-checkbox:checked ~ .fade-in-table {
+        opacity: 1;
+    }
+
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-collapse: collapse;
+        font-family: 'Poppins', sans-serif;
+    }
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+    th {
+        background-color: #f29e0c;
+        color: white;
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #fceb8b;
+                         }
+    
+    .center-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    h1 {font-family: 'Poppins';
+        color:#f0c402;
+        text-align: center;}
+    
+    p {text-align: center;
+       font-family: Arial;
+       }
+    
+    h2 {font-family: 'Poppins'; color:#f7b816; text-align: center;
+        }
+    
+   
+    .imgfat {
+         width: 730px;
+        height: 900px;}
+    
+    .imagediv {align-items: center;
+               border: 1px solid black;
+               border-radius: 5px;
+               padding: 10px;
+              display: flex;
+              justify-content: center;}
+
+    span {
+          font-weight: bold;}
+</style>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a id="top"></a>
+    
+<h1>6<sup>th</sup> Path: Fatty Acid Metabolism</h1>
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+    <p style="font-family: 'Poppins', sans-serif;">Let's talk about fats! Fatty acids are another form of energy storage, that store even <b>more energy than glycogen!</b> Similar to glycogen metabolism, the two fatty acid metabolism forms are <span style="background-color: #fceb8b;">fatty acid synthesis</span> and <span style="background-color: #fceb8b;">fatty acid breakdown (beta-oxidation)</span>. They are also reverses of each other by definition. Keep scrolling to find out more about our energy storage molecules.</p>
+</div>
+
+    <h2>What are <u>Fatty Acids?</u></h2>
+    <table>
+<tr>
+    <td> Fatty acids are a class of lipids <b>hydrophobic carbon chains</b> with a <b>negatively charged carboxyl group</b> at its end. Three fatty acid chains and a glycerol molecule can come together to form a <b>triacylglycerol</b>, the major form of energy storage in the body. They can be classified as essential or nonessential, short, medium, or long chain, and saturated or unsaturated.</td>
+</tr></table>
+
+    <div class="center-img">
+        <img src="fattyacidstructure.jpg" style="width:640px; height:210px;">
+        </div>
+    
+<h2>What is Fatty Acid Synthesis?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Fatty acid synthesis is the process of creating fatty acids, using <span style="background-color: #fceb8b;">oxaloacetate as the substrate</span>. It takes place in the <span style="background-color: #fceb8b;">cytosol</span>, however, the first step, which converts oxaloacetate to citrate, occurs in the <span style="background-color: #fceb8b;">mitochondrial matrix</span>. It produces <b>palmitate</b> as a product. The main enzymes are <span style="color:#f29e0c;">citrate lyase and acetyl-CoA carboxylase</span>.</p>
+
+    <h2>What is Beta Oxidation?</h2>
+<p style="font-family: 'Poppins', sans-serif;">Beta oxidation is fatty acid degradation, using <span style="background-color: #fceb8b;">fatty acid chains as the substrate</span>, usually <span style="background-color: #fceb8b;">palmitoyl-CoA</span> (the longest fatty acid chain our body can produce, which is 16C long). <b>In most cells, this process follows the Krebs Cycle</b> to generate more energy. It is important to note that this reaction takes place in the <span style="background-color: #fceb8b;">mitochondria</span>, however, the fatty acid must use the <span style="background-color: #fceb8b;">carnitine shuttle</span>to enter the matrix. Scroll to the diagram at the end of this page to see how it works. Finally, the beta-oxidation process releases <span style="background-color: #fceb8b;">fatty-acyl CoA (minus 2 carbons) and acetyl-CoA</span>, as products. The process continues until all of the palmitoyl-CoA is broken down into acetyl-CoAs.</p>
+
+
+
+<div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
+
+<h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors (Regulation)!</u></h2>
+<p style="font-family: 'Poppins', sans-serif; text-align:justify;">Fatty acid synthesis and beta-oxidation are <b>reverse regulated. </b> The main activator of fatty acid synthesis is <span style="background-color: #fceb8b;">insulin</span>, and the main inhibitor is glucagon. The opposite is true for beta-oxidation, which occurs in the fasting state-- thus it is activated by <span style="background-color: #fceb8b;">glucagon</span>. Let's take a look at some of the key enzymes the means of regulation of them.</p>
+
+<label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
+<input type="checkbox" id="toggle-table" class="toggle-checkbox">
+
+<table class="fade-in-table">
+    <tr>
+        <th>Enzyme</th>
+        <th>Reaction/Process</th>
+        <th>Activator</th>
+        <th>Inhibitor</th>
+    </tr>
+    <tr>
+        <td><b>Acetyl-CoA carboxylase</b></td>
+        <td>Fatty acid synthesis (acetyl-CoA  → malonyl-CoA)</td>
+        <td>Citrate, insulin</td>
+        <td>long chain fatty acyl-CoA, glucagon/epinephrine</td>
+    </tr>
+    <tr>
+        <td><b>Fatty Acid synthase</b></td>
+        <td>Fatty acid synthesis (malonyl-CoA  → palmitate)</td>
+        <td>Citrate, insulin</td>
+        <td>long chain fatty acyl-CoA, glucagon/epinephrine</td>
+    </tr>
+    <tr>
+        <td><b>CPT-1</b></td>
+        <td>Beta-oxidation (fatty acids  → fatty acyl-carnitine</td>
+        <td>--</td>
+        <td>malonyl-CoA</td>
+    </tr>
+</table>
+    </div>
+
+<h2><u>Fatty Acid Metabolism Full Diagrams</u></h2>
+        <p>Check out these diagrams, outlining the full picture of the pathways.</p>
+    <div class= "imagediv">
+    
+        <img class="imgfat" src="fattyacidsynthesis_.png">
+        </div>
+    <div class="imagediv">
+        <img class="imgfat" src="betaoxidation.png">
+        </div>
+
+             <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+    
+<h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
+
+<h2><a href="hmp.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
+
+</body>
+</html>
