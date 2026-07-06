@@ -107,8 +107,38 @@ p {
   box-shadow: 0 4px 16px rgba(36, 77, 61, 0.1);
 }
 
+/* ── Responsive tables ── */
 @media (max-width: 768px) {
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.25rem; }
   .bordered-box, .info-box { width: 95%; padding: 16px; }
+
+  table { display: block; width: 100% !important; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85rem; }
+  td, th { padding: 8px 10px !important; white-space: nowrap; }
+
+  img { max-width: 100% !important; height: auto !important; }
+  img[width] { width: 100% !important; height: auto !important; }
+
+  body { padding: 0 8px; }
+  .content { margin-top: 12px; }
 }
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.1rem; }
+  h3 { font-size: 1rem; }
+  .bordered-box, .info-box { width: 100%; padding: 12px; border-radius: 12px; margin: 12px auto; }
+  p { font-size: 0.9rem; }
+  hr { width: 90%; margin: 20px auto; }
+  .content { margin-top: 8px; }
+}
+
+/* ── Touch-friendly toggle buttons ── */
+button, .toggle-btn, summary {
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+}
+
+/* ── Smooth scrolling ── */
+html { scroll-behavior: smooth; }

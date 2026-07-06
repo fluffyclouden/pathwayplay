@@ -15,9 +15,10 @@
       color: #333;
     }
 
+    /* ── Navbar ── */
     .navbar {
       background: linear-gradient(135deg, #244d3d, #4f9d6b);
-      padding: 0 24px;
+      padding: 0 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -30,6 +31,8 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     }
 
+    .navbar-left { display: flex; align-items: center; gap: 12px; }
+
     .navbar .brand {
       font-size: 1.3rem;
       font-weight: 600;
@@ -40,16 +43,17 @@
 
     .navbar .brand u { text-decoration: none; }
 
-    .navbar nav { display: flex; gap: 8px; }
+    .navbar nav { display: flex; gap: 4px; }
 
     .navbar nav a {
       color: rgba(255,255,255,0.9);
       text-decoration: none;
-      padding: 8px 16px;
+      padding: 8px 12px;
       border-radius: 6px;
       font-weight: 500;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
     }
 
     .navbar nav a:hover {
@@ -57,12 +61,48 @@
       color: white;
     }
 
+    /* ── Hamburger ── */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+      flex-direction: column;
+      gap: 5px;
+      outline: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: white;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform-origin: center;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* ── Layout ── */
     .layout {
       display: flex;
       min-height: 100vh;
       padding-top: 56px;
     }
 
+    /* ── Sidebar / Drawer ── */
     .sidebar {
       width: 260px;
       min-width: 260px;
@@ -83,6 +123,23 @@
       border: none;
     }
 
+    /* ── Overlay ── */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 99;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .sidebar-overlay.open {
+      display: block;
+      opacity: 1;
+    }
+
+    /* ── Main Content ── */
     .main-content {
       flex: 1;
       margin-left: 260px;
@@ -98,48 +155,113 @@
       min-height: calc(100vh - 56px);
     }
 
+    /* ── Tablet (≤ 768px) ── */
     @media (max-width: 768px) {
+      .hamburger { display: flex; }
+
       .sidebar {
-        width: 200px;
-        min-width: 200px;
+        width: 280px;
+        min-width: 280px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+        border-right: none;
+        box-shadow: 2px 0 16px rgba(0,0,0,0.15);
       }
-      .main-content { margin-left: 200px; }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sidebar iframe {
+        height: 100%;
+      }
+
+      .main-content { margin-left: 0; }
     }
 
-    @media (max-width: 600px) {
+    /* ── Small Mobile (≤ 480px) ── */
+    @media (max-width: 480px) {
+      .navbar { padding: 0 12px; }
+
+      .navbar .brand { font-size: 1.1rem; }
+
+      .navbar nav a {
+        padding: 6px 10px;
+        font-size: 0.78rem;
+      }
+
       .sidebar {
         width: 100%;
-        min-width: unset;
-        position: relative;
-        top: 0;
-        height: auto;
-        max-height: 200px;
-        border-right: none;
-        border-bottom: 1px solid #e0e6e0;
+        min-width: 0;
+        max-width: 320px;
       }
-      .main-content { margin-left: 0; }
-      .layout { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
   <div class="navbar">
-    <a href="index.html" class="brand"><u>pathwayplay.net</u></a>
+    <div class="navbar-left">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="brand"><u>pathwayplay.net</u></a>
+    </div>
     <nav>
       <a href="home.html" target="content">Home</a>
       <a href="resources.html" target="content">Resources</a>
     </nav>
   </div>
 
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
   <div class="layout">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <iframe src="metabolomap.html" name="menu"></iframe>
     </div>
     <div class="main-content">
       <iframe src="home.html" name="content"></iframe>
     </div>
   </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    // Close drawer immediately when sidebar sends navigation message
+    window.addEventListener('message', function (e) {
+      if (e.data === 'nav-clicked') closeMenu();
+    });
+
+    // Fallback: close drawer when content iframe loads
+    document.querySelector('iframe[name="content"]').addEventListener('load', closeMenu);
+
+    // Close drawer on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sidebar.classList.contains('open')) closeMenu();
+    });
+  </script>
 
 </body>
 </html>

@@ -21,13 +21,13 @@
 
     .sidebar-menu .menu-header {
       text-align: center;
-      padding: 8px 0 12px;
+      padding: 4px 0 12px;
       border-bottom: 1px solid #e8eee8;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .sidebar-menu .menu-header h2 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #244d3d;
       margin: 0;
@@ -35,9 +35,9 @@
     }
 
     .sidebar-menu .menu-header p {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: #888;
-      margin-top: 4px;
+      margin-top: 2px;
       font-weight: 400;
     }
 
@@ -46,7 +46,7 @@
     }
 
     .sidebar-menu nav ul li {
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .sidebar-menu nav ul li a {
@@ -55,13 +55,21 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 10px 14px;
+      padding: 12px 14px;
       border-radius: 8px;
       font-weight: 500;
       font-size: 0.85rem;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       background: #f8faf8;
       border-left: 3px solid transparent;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+    }
+
+    .sidebar-menu nav ul li a:active {
+      background: #e8f0e8;
+      transform: scale(0.98);
     }
 
     .sidebar-menu nav ul li a .dot {
@@ -94,6 +102,12 @@
     .sidebar-menu nav ul li:nth-child(6) a:hover { border-left-color: #f0c402; }
     .sidebar-menu nav ul li:nth-child(7) a:hover { border-left-color: #620080; }
     .sidebar-menu nav ul li:nth-child(8) a:hover { border-left-color: #cc1f67; }
+
+    @media (max-width: 768px) {
+      .sidebar-menu .menu-header { padding-top: 0; }
+      .sidebar-menu .menu-header h2 { font-size: 0.95rem; }
+      .sidebar-menu nav ul li a { padding: 14px 14px; font-size: 0.9rem; }
+    }
   </style>
 </head>
 <body>
@@ -115,5 +129,14 @@
       </ul>
     </nav>
   </div>
+
+  <script>
+    // Notify parent to close drawer when navigating
+    document.querySelectorAll('.sidebar-menu nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        try { window.parent.postMessage('nav-clicked', '*'); } catch (e) {}
+      });
+    });
+  </script>
 </body>
 </html>
