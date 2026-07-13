@@ -7,37 +7,6 @@
 
 <title>ETC on PathwayPlay</title>
 <style>
-    body { margin: 0; padding-top: 60px; }
-    .navbar {
-      background-color: #4f9d6b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
-    .navbar h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-family: 'Poppins';
-      color: white;
-    }
-    .navbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-family: arial;
-    }
-    .navbar nav a:hover { text-decoration: underline; }
-    .in-iframe .navbar { display: none; }
-    .in-iframe body { padding-top: 0; }
-</style>
-<style>
 
     .toggle-button, .button-link {
         display: inline-block;
@@ -86,11 +55,7 @@
         background-color: #9cf7c9;
                          }
     
-    .center-img {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+    .center-img { display: block; text-align: center; margin: 20px 0; }
 
     h1 {font-family: 'Poppins';
         color:#32bf82;
@@ -106,12 +71,7 @@
     
     .imgpo { max-width: 100%; height: auto; }
     
-    .imagediv {align-items: center;
-               border: 1px solid black;
-               border-radius: 5px;
-               padding: 10px;
-              display: flex;
-              justify-content: center;}
+    .imagediv { border: 1px solid black; border-radius: 5px; padding: 10px; display: block; text-align: center; }
 
     span {
           font-weight: bold;}
@@ -175,10 +135,12 @@
     <img src="etctable.jpg" style="max-width: 700px; height: auto; width: 100%;">
 </div>
 
+<div class="table-scroll-wrapper">
 <table>
 <tr>
     <td><b>Complex V</b> makes up the chemiosmotic half of the chain. It does not receive electrons, but rather pumps the hydrogen ions in the intermembrane space from the oxidized NAD+s and FADs down its concentration gradient, back into the inner membrane, generating <span>ATP in the process</span>. Complex V is called <b>ATP synthase</b>.</td>
 </tr></table>
+</div>
 
 <h2 style="color:#32bf82;">Note: Oxygen is always the final electron acceptor of the ETC. It accepts hydrogens, reducing it to water.</h2>
 
@@ -194,6 +156,7 @@
     
 <input type="checkbox" id="toggle-table" class="toggle-checkbox">
 
+<div class="table-scroll-wrapper">
 <table class="fade-in-table">
     <tr>
         <th>Molecule</th>
@@ -222,6 +185,7 @@
         <td>Increases the permeability of the inner mitochondrial membrane, causing the ETC to run without the H+ gradient</td>
     </tr>
 </table>
+</div>
     </div>
 
 <h2><u>ETC Diagram</u></h2>

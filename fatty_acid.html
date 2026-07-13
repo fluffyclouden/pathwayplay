@@ -7,37 +7,6 @@
 
 <title>Fatty Acid Metabolism PathwayPlay</title>
 <style>
-    body { margin: 0; padding-top: 60px; }
-    .navbar {
-      background-color: #4f9d6b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
-    .navbar h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-family: 'Poppins';
-      color: white;
-    }
-    .navbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-family: arial;
-    }
-    .navbar nav a:hover { text-decoration: underline; }
-    .in-iframe .navbar { display: none; }
-    .in-iframe body { padding-top: 0; }
-</style>
-<style>
 
     .toggle-button, .button-link {
         display: inline-block;
@@ -86,11 +55,7 @@
         background-color: #fceb8b;
                          }
     
-    .center-img {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+    .center-img { display: block; text-align: center; margin: 20px 0; }
 
     h1 {font-family: 'Poppins';
         color:#f0c402;
@@ -106,12 +71,7 @@
    
     .imgfat { max-width: 100%; height: auto; }
     
-    .imagediv {align-items: center;
-               border: 1px solid black;
-               border-radius: 5px;
-               padding: 10px;
-              display: flex;
-              justify-content: center;}
+    .imagediv { border: 1px solid black; border-radius: 5px; padding: 10px; display: block; text-align: center; }
 
     span {
           font-weight: bold;}
@@ -167,10 +127,12 @@
 </div>
 
     <h2>What are <u>Fatty Acids?</u></h2>
-    <table>
+    <div class="table-scroll-wrapper">
+<table>
 <tr>
     <td> Fatty acids are a class of lipids <b>hydrophobic carbon chains</b> with a <b>negatively charged carboxyl group</b> at its end. Three fatty acid chains and a glycerol molecule can come together to form a <b>triacylglycerol</b>, the major form of energy storage in the body. They can be classified as essential or nonessential, short, medium, or long chain, and saturated or unsaturated.</td>
 </tr></table>
+</div>
 
     <div class="center-img">
         <img src="fattyacidstructure.jpg" style="max-width: 640px; height: auto; width: 100%;">
@@ -192,6 +154,7 @@
 <label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
 <input type="checkbox" id="toggle-table" class="toggle-checkbox">
 
+<div class="table-scroll-wrapper">
 <table class="fade-in-table">
     <tr>
         <th>Enzyme</th>
@@ -218,6 +181,7 @@
         <td>malonyl-CoA</td>
     </tr>
 </table>
+</div>
     </div>
 
 <h2><u>Fatty Acid Metabolism Full Diagrams</u></h2>

@@ -7,37 +7,6 @@
 
 <title>Gluconeogenesis on PathwayPlay</title>
 <style>
-    body { margin: 0; padding-top: 60px; }
-    .navbar {
-      background-color: #4f9d6b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
-    .navbar h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-family: 'Poppins';
-      color: white;
-    }
-    .navbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-family: arial;
-    }
-    .navbar nav a:hover { text-decoration: underline; }
-    .in-iframe .navbar { display: none; }
-    .in-iframe body { padding-top: 0; }
-</style>
-<style>
 
     .toggle-button, .button-link {
         display: inline-block;
@@ -86,11 +55,7 @@
         background-color: #a3ffc9;
         border: 1px solid black;}
     
-    .center-img {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+    .center-img { display: block; text-align: center; margin: 20px 0; }
 
     h1 {font-family: 'Poppins';
         color: #2ac942;
@@ -104,12 +69,7 @@
         }
     img { max-width: 100%; height: auto; }
     
-    .imagediv {align-items: center;
-               border: 1px solid black;
-               border-radius: 5px;
-               padding: 10px;
-              display: flex;
-              justify-content: center;}
+    .imagediv { border: 1px solid black; border-radius: 5px; padding: 10px; display: block; text-align: center; }
     span {font-weight: bold
           }
 </style>
@@ -164,9 +124,11 @@
 <h2>What is the gluconeogenesis pathway?</h2>
 <p style="font-family: 'Poppins', sans-serif;"><b>Let's take apart the word:</b></p>
 
+<div class="table-scroll-wrapper">
 <table>
     <tr><td style="font-family: 'Poppins', sans-serif;">Gluco (glucose/sugar) + neo (new) + genesis (creation) </tr>
 </table>
+</div>
     
 <p style="font-family: 'Poppins', sans-serif;">In this pathway, we're making new sugars <b>from preexisting molecules</b> in the body.<span style="background-color: #4de3a0;"> Glycolysis makes pyruvate from glucose</span>. This time, we're making <span style ="color:#2ac942;">glucose from pyruvate</span>.</p>
     
@@ -188,7 +150,8 @@
 <div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
     <h2 style="text-align:center;"><u>Let’s Talk Phases!</u></h2>
     <p>The gluconeogenic pathway can be broken down into three phases, bypass 1, conversion and bypass 2.</p>
-    <table>
+    <div class="table-scroll-wrapper">
+<table>
         <tr>
             <th>Phase</th>
             <th>Summary</th>
@@ -207,6 +170,7 @@
         </tr>
     </table>
 </div>
+</div>
 
 <h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
 <p style="font-family: 'Poppins', sans-serif; text-align:justify;">This process takes place <b>in early starvation</b>or during the <em>fasting state</em>. Thus <b>the main activator</b> of gluconeogenesis is <span style="background-color: #4de3a0;">glucagon</span> and its main inhibitor is <span style="background-color: #2ac942;"> insulin</span>. Below are some other activators and inhibitors specific to enzymes in the process.</p>
@@ -214,6 +178,7 @@
 <label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
 <input type="checkbox" id="toggle-table" class="toggle-checkbox">
 
+<div class="table-scroll-wrapper">
 <table class="fade-in-table">
     <tr>
         <th>Enzyme</th>
@@ -246,6 +211,7 @@
         <td>insulin</td>
     </tr>
 </table>
+</div>
 
 <h2><u>Gluconeogenesis Full Diagram</u></h2>
         <p><b>Check out this diagram, outlining the full picture of the pathway.</b></p>

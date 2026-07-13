@@ -7,37 +7,6 @@
 
 <title>Glycogen Metabolism on PathwayPlay</title>
 <style>
-    body { margin: 0; padding-top: 60px; }
-    .navbar {
-      background-color: #4f9d6b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
-    .navbar h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-family: 'Poppins';
-      color: white;
-    }
-    .navbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-family: arial;
-    }
-    .navbar nav a:hover { text-decoration: underline; }
-    .in-iframe .navbar { display: none; }
-    .in-iframe body { padding-top: 0; }
-</style>
-<style>
 
     .toggle-button, .button-link {
         display: inline-block;
@@ -87,11 +56,7 @@
         background-color: #a3f1ff;
                          }
     
-    .center-img {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+    .center-img { display: block; text-align: center; margin: 20px 0; }
 
     h1 {font-family: 'Poppins';
         color:#3a32ad;
@@ -106,12 +71,7 @@
     
     .imggly { max-width: 100%; height: auto; }
     
-    .imagediv {align-items: center;
-               border: 1px solid black;
-               border-radius: 5px;
-               padding: 10px;
-              display: flex;
-              justify-content: center;}
+    .imagediv { border: 1px solid black; border-radius: 5px; padding: 10px; display: block; text-align: center; }
 
     span {
           font-weight: bold;}
@@ -190,6 +150,7 @@
 <label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
 <input type="checkbox" id="toggle-table" class="toggle-checkbox">
 
+<div class="table-scroll-wrapper">
 <table class="fade-in-table">
     <tr>
         <th>Enzyme</th>
@@ -210,6 +171,7 @@
         <td>glucose-6-phosphate, ATP, glucose, insulin</td>
     </tr>
 </table>
+</div>
     
 
 <h2><u>Glycogen Metabolism Full Diagrams</u></h2>

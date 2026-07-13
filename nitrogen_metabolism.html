@@ -7,37 +7,6 @@
 
 <title>Nitrogen Metabolism on PathwayPlay</title>
 <style>
-    body { margin: 0; padding-top: 60px; }
-    .navbar {
-      background-color: #4f9d6b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      box-sizing: border-box;
-    }
-    .navbar h1 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-family: 'Poppins';
-      color: white;
-    }
-    .navbar nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-family: arial;
-    }
-    .navbar nav a:hover { text-decoration: underline; }
-    .in-iframe .navbar { display: none; }
-    .in-iframe body { padding-top: 0; }
-</style>
-<style>
 
     .toggle-button, .button-link {
         display: inline-block;
@@ -87,11 +56,7 @@
         background-color: #eda1bd;
         border: 1px solid black;}
     
-    .center-img {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
+    .center-img { display: block; text-align: center; margin: 20px 0; }
 
     h1 {font-family: 'Poppins';
         color: #cc1f67;
@@ -105,12 +70,7 @@
         }
     img { max-width: 100%; height: auto; }
     
-    .imagediv {align-items: center;
-               border: 1px solid black;
-               border-radius: 5px;
-               padding: 10px;
-              display: flex;
-              justify-content: center;}
+    .imagediv { border: 1px solid black; border-radius: 5px; padding: 10px; display: block; text-align: center; }
 
     
     span {
@@ -168,6 +128,7 @@
 <h2>What is Nitrogen Metabolism?</h2>
 <p style="font-family: 'Poppins', sans-serif;">Nitrogen metabolism encompasses all of the ways the body uses nitrogen from intake. <span style="background-color:#eda1bd;">A majority of nitrogen intake is derived from dietary proteins</span>. Unlike with fats and carbohydrate processes, <b>nitrogen is not stored in the body--</b> it is either used or excreted as waste. The amount of nitrogen excreted and taken in can be measured as positive or negative. This is known as <b>nitrogen balance.</b> So what makes a nitrogen balance <span style="background-color:#eda1bd;">"positive"</span> or <span style="background-color:#eda1bd;">"negative"</span>?</p>
 
+<div class="table-scroll-wrapper">
 <table>
     <th>Positive Nitrogen Balance</th>
     <th>Negative Nitrogen Balance</th>
@@ -186,6 +147,7 @@
         </td>
     </tr>
 </table>
+</div>
     
 <div style="border: 1px solid black; padding: 20px; border-radius: 5px;">
 <h2>What is the significance?</h2>
@@ -194,7 +156,8 @@
 
     <h2 style="text-align:center;"><u>Let’s Talk Phases!</u></h2>
     <p>Here's the big picture of nitrogen metabolism in 3 phases.</p>
-    <table>
+    <div class="table-scroll-wrapper">
+<table>
         <tr>
             <th>Phase</th>
             <th>Summary</th>
@@ -214,6 +177,7 @@
         
     </table>
 </div>
+</div>
 
 <h2 style="text-align:center;"><u>Let’s Talk Activators and Inhibitors!</u></h2>
 <p style="font-family: 'Poppins', sans-serif; text-align:justify;">Just like every process, nitrogen metabolism enzymes have activators and inhibitors too. Two enzymes from the entire cycle in particular stand out. Take a look at them below.</p>
@@ -221,6 +185,7 @@
 <label for="toggle-table" class="toggle-button">Click to reveal enzyme activators and inhibitors</label>
 <input type="checkbox" id="toggle-table" class="toggle-checkbox">
 
+<div class="table-scroll-wrapper">
 <table class="fade-in-table">
     <tr>
       <th>Enzyme</th>
@@ -241,6 +206,7 @@
       <td>--</td>
     </tr>
   </table>
+</div>
 
 <h2><u> Full Diagram</u></h2>
         <p><b>Check out this diagram, outlining the full picture of the pathway.</b></p>
