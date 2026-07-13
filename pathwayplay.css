@@ -1,10 +1,28 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* ── Scrollbars ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #b0c4b0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f9d6b;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
   background: white;
   line-height: 1.6;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .content {
@@ -113,6 +131,61 @@ p {
   box-shadow: 0 4px 16px rgba(36, 77, 61, 0.1);
 }
 
+.form-div {
+  border: 1px solid #d4e0d4;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 16px auto;
+  width: 90%;
+  max-width: 640px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.form-div form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.form-div label {
+  font-weight: 600;
+  color: #244d3d;
+  text-align: left;
+}
+.form-div input, .form-div textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s;
+}
+.form-div input:focus, .form-div textarea:focus {
+  outline: none;
+  border-color: #4f9d6b;
+  box-shadow: 0 0 0 2px rgba(79, 157, 107, 0.2);
+}
+.form-div button {
+  background-color: #244d3d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+.form-div button:hover {
+  background-color: #1a3a2d;
+  transform: scale(1.02);
+}
+.form-div button:active {
+  transform: scale(0.98);
+}
+
 .table-scroll-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -140,7 +213,8 @@ p {
   .content { margin-top: 12px; }
 
   .bordered-box:hover, .info-box:hover, .keyconcepts:hover {
-    transform: none;
+    transform: none !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04) !important;
   }
   .button-link {
     display: block;
@@ -350,6 +424,7 @@ html { scroll-behavior: smooth; }
 /* ── Main Content ── */
 .main-content {
   flex: 1;
+  min-width: 0;
   margin-left: 260px;
   padding: 0;
   background: white;
