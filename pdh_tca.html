@@ -123,16 +123,45 @@
 </style>
  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="pathway-body">
-  <script>if (window.top !== window.self) document.documentElement.classList.add('in-iframe');</script>
+<body>
   <div class="navbar">
-    <h1><u>pathwayplay</u></h1>
+    <div class="navbar-left">
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="brand"><u>pathwayplay</u></a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="metabolomap.html">MetaboloMap</a>
       <a href="resources.html">Resources</a>
     </nav>
   </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <div class="layout">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-menu">
+        <div class="menu-header">
+          <h2>⌕ MetaboloMap</h2>
+          <p>Click a pathway to explore</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="glycolysis.html"><span class="dot"></span>Glycolysis</a></li>
+            <li><a href="pdh_tca.html"><span class="dot"></span>PDH and TCA</a></li>
+            <li><a href="etc.html"><span class="dot"></span>ETC</a></li>
+            <li><a href="gluconeogenesis.html"><span class="dot"></span>Gluconeogenesis</a></li>
+            <li><a href="glycogen.html"><span class="dot"></span>Glycogen Metabolism</a></li>
+            <li><a href="fatty_acid.html"><span class="dot"></span>Fatty Acid Metabolism</a></li>
+            <li><a href="hmp.html"><span class="dot"></span>HMP</a></li>
+            <li><a href="nitrogen_metabolism.html"><span class="dot"></span>Nitrogen Metabolism</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main-content">
+
     <a id="top"></a>
     
 <h1>2<sup>nd</sup> Path: PDH and TCA</h1>
@@ -222,5 +251,26 @@
 
 <h2><a href="etc.html" class="button-link button-link-next">Head to the next pathway!</a></h2>
 
+    </div>
+  </div>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+      document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    if(hamburger) hamburger.addEventListener('click', toggleMenu);
+    if(overlay) overlay.addEventListener('click', closeMenu);
+  </script>
 </body>
 </html>
