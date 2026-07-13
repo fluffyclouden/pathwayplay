@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the PDH reaction and TCA (Krebs) cycle — enzymes, regulation, and full diagrams on PathwayPlay.">
   <link rel="stylesheet" href="pathwayplay.css">
 
 <title>PDH and TCA on PathwayPlay</title>
@@ -103,12 +104,9 @@
     h2 {font-family: 'Poppins'; color:#c7185e; text-align: center;
         }
     
-    .imgkrebs {
-         width: 850px;
-        height: 900px;}
+    .imgkrebs { max-width: 100%; height: auto; }
     
-    .imgpo {width:900px;
-            height:150px;}
+    .imgpo { max-width: 100%; height: auto; }
     
     .imagediv {align-items: center;
                border: 1px solid black;
@@ -125,10 +123,10 @@
 </style>
  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="pathway-body">
   <script>if (window.top !== window.self) document.documentElement.classList.add('in-iframe');</script>
   <div class="navbar">
-    <h1><u>pathwayplay.net</u></h1>
+    <h1><u>pathwayplay</u></h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="metabolomap.html">MetaboloMap</a>
@@ -147,7 +145,7 @@
 <p style="font-family: 'Poppins', sans-serif;">The PDH and TCA reactions are the <b>second and third steps of aerobic respiration, respectively</b>. Pyruvate oxidation requires the enzyme <span style="background-color: #ff8a92;">pyruvate dehydrogenase</span>, which is an 3-enzyme complex. Each enzyme in the complex requires a coenzyme required from a vitamin, with the exception of <span style="color:#96031e;">lipoic acid in enzyme 2</span>.</p>
     
 <div class="center-img">
-    <img src="pdhtable.jpg" style="height: 320px; width:500px;">
+    <img src="pdhtable.jpg" style="max-width: 500px; height: auto; width: 100%;">
 </div>
 
     <h2>What is TCA?</h2>
@@ -218,7 +216,7 @@
         <img class="imgkrebs" src="tca.png">
         </div>
 
-     <a href="#top" style="display: block; text-align: center; margin-top: 20px; color: black; text-decoration: none; font-weight: bold; font-family:'Poppins';">⬆ Back to Top</a>
+     <a href="#top" class="back-to-top">⬆ Back to Top</a>
     
 <h2><a href="resources.html" class="button-link button-link-summary">Head to resources!</a></h2>
 
